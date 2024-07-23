@@ -10,9 +10,11 @@ export default defineConfig({
     brotliSize: false, // not supported in StackBlitz
   }, 
   server: {
+    host: '0.0.0.0', // Escucha en todas las interfaces de red
+    port: 5173,       // Especifica el puerto que deseas usar
     proxy: {
       '/api': {
-          target: 'http://192.168.1.141:8080',
+          target: 'http://192.168.1.127:8000',
       }
     }
   }
